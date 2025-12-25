@@ -56,7 +56,7 @@
 
     <header>
         <h1>Raizenn</h1>
-        <p>Roblox Studio Scripter</p>
+        <p>Portfolio</p>
     </header>
 
     <nav>
@@ -70,17 +70,17 @@
         <section id="about">
             <h2>About Me</h2>
         
-            <p><b>My timezone:</b> UTC/GMT+7</p>
             <p>
                 <b>My time:</b> <span id="myTime">--:--:--</span><br>
+                (<span id="myTZ">UTC/GMT+</span>)
                 <b>Your time:</b> <span id="yourTime">--:--:--</span>
-                (<span id="yourTZ">UTC</span>)
+                (<span id="yourTZ">UTC/GMT+</span>)
             </p>
         
             <p>
                 Hi, I’m <b>Raizenn</b>. I’ve been learning and working with Roblox LuaU scripting since 2020
                 (around 5 years of experience).
-                I’m comfortable with conversational English and fluent in Indonesian.
+                I'm able to communicate with conversational English and fluent in Indonesian.
             </p>
         
             <p>
@@ -96,7 +96,7 @@
         
             <p>
                 Below are some showcases of my previous projects.
-                If you’re interested, feel free to use the <b>Contact Me</b> section below.
+                If you're interested, feel free to use the <b>Contact Me</b> section below.
                 Thanks for checking out my portfolio!
             </p>
         </section>
@@ -108,7 +108,7 @@
             
             <div class="project">
                 <details>
-                    <summary><b>Shield System (Freelance)</b></summary>
+                    <summary><b>Shield System</b></summary>
                     <iframe loading="lazy" width="100%" height="315"
                         src="https://www.youtube.com/embed/b-92o1IKBP0"
                         frameborder="0" allowfullscreen>
@@ -124,15 +124,15 @@
                         src="https://www.youtube.com/embed/ICXWsUFs4t0"
                         frameborder="0" allowfullscreen>
                     </iframe>
-                    <p>A simple gun built for a client.</p>
+                    <p>A simple gun built for a freelance client.</p>
                 </details>
             </div>
         
             <div class="project">
                 <details>
-                    <summary><b>Land of Alura (Scripting)</b></summary>
+                    <summary><b>Land of Alura (Scripting only part)</b></summary>
                     <iframe loading="lazy" width="100%" height="315"
-                        src="https://www.youtube.com/embed/zYz1wQX3NHo"
+                        src="https://www.youtube.com/embed/eD6iSbq_dvg"
                         frameborder="0" allowfullscreen>
                     </iframe>
                     <p>
@@ -183,7 +183,8 @@
     
             document.getElementById("myTime").textContent = formatTime(myTime);
             document.getElementById("yourTime").textContent = formatTime(now);
-            document.getElementById("yourTZ").textContent = "UTC" + (now.getTimezoneOffset() <= 0 ? "+" : "-") + Math.abs(now.getTimezoneOffset() / 60);
+            document.getElementById("myTZ").textContent = "UTC/GMT+7"
+            document.getElementById("yourTZ").textContent = "UTC/GMT" + (now.getTimezoneOffset() <= 0 ? "+" : "-") + Math.abs(now.getTimezoneOffset() / 60);
         }
     
         setInterval(updateTime, 1000);
